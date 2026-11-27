@@ -1,197 +1,400 @@
 {
-  "_help": "store.json = everything you sell on the store. Prices, perks, coin packs, crate keys, page words and page colours all live here. Copy a { } block to add an item, delete a block to remove one. config.json has the server name, IP and Discord link; site.json has the homepage settings.",
-
+  "_help": "MergeSMP Store Configuration | Custom premium red, black and cyan theme.",
   "currency": {
-    "_help": "The money players can pay in. 'rate' = how many of this currency equal 1 unit of 'base'. 'decimals' = digits after the decimal point (0 shows ₹449, 2 shows $4.99).",
     "default": "INR",
     "base": "INR",
     "options": {
-      "INR": { "label": "INR", "symbol": "₹", "decimals": 0, "rate": 1 },
-      "USD": { "label": "USD", "symbol": "$", "decimals": 2, "rate": 0.012 }
+      "INR": {
+        "label": "INR",
+        "symbol": "₹",
+        "decimals": 0,
+        "rate": 1
+      },
+      "USD": {
+        "label": "USD",
+        "symbol": "$",
+        "decimals": 2,
+        "rate": 0.012
+      }
     }
   },
-
   "scroll": {
-    "_help": "'enabled': false freezes the store page (no background colour shift, no fade-ins). 'colourShift' moves the background colour as you scroll. 'reveal' fades cards and headings in as they reach the screen.",
     "enabled": true,
     "colourShift": true,
     "reveal": true
   },
-
   "redirect": {
-    "_help": "Where 'Buy now' / 'Continue to payment' sends players when the item has no orderLink of its own. Leave it empty to use the Discord link from config.json.",
-    "defaultOrderLink": ""
+    "defaultOrderLink": "https://discord.gg/qkrEyvx2ye"
   },
-
   "pages": {
-    "_help": "One block per store page. 'navLabel' = the tab name in the store menu. 'colour' = the colour of the whole page (a name like gold, purple, blue or a hex value; empty = the site colour from config.json). 'cards' (coins and keys) are the packs for sale.",
-
     "ranks": {
       "navLabel": "Ranks",
-      "colour": "",
-      "title": "Ranks",
-      "subtitle": "Support the server and unlock ranks, perks and cosmetics for your account.",
-      "boardTitle": "Available ranks",
-      "boardText": "Every rank is applied automatically within a few minutes.",
-      "note": "Ranks are applied automatically within a few minutes of payment. Need help? Ask in Discord.",
-      "buttonText": "Order Now",
-      "orderLink": ""
+      "colour": "#FF3434",
+      "title": "CHOOSE YOUR LEGACY",
+      "subtitle": "More than a rank. Make your name known across the MergeSMP network.",
+      "boardTitle": "THE RANK COLLECTION",
+      "boardText": "Find your place. Unlock perks. Build your legacy.",
+      "note": "After payment, open a ticket in our Discord and share your order details. Our team will help verify and deliver your rank.",
+      "buttonText": "UNLOCK RANK",
+      "orderLink": "https://discord.gg/qkrEyvx2ye"
     },
-
     "coins": {
-      "navLabel": "Coins",
-      "colour": "gold",
-      "title": "Coins",
-      "subtitle": "Top up your in-game balance and spend it in player shops, auctions and cosmetics.",
-      "boardTitle": "Coin packs",
-      "boardText": "Coins are added to your account automatically after payment.",
-      "note": "",
-      "buttonText": "Buy coins",
+      "navLabel": "Shards",
+      "colour": "#00C6FF",
+      "title": "POWER UP WITH SHARDS",
+      "subtitle": "Get more from every adventure with MergeSMP Shards.",
+      "boardTitle": "SHARD PACKS",
+      "boardText": "Pick a pack and get ready for your next upgrade.",
+      "note": "After payment, open a ticket in our Discord with your order details so the team can verify your purchase and arrange delivery.",
+      "buttonText": "GET SHARDS",
+      "orderLink": "https://discord.gg/qkrEyvx2ye",
       "cards": [
         {
-          "name": "1,000 coins",
-          "amount": "1K",
+          "name": "10 Shards",
+          "amount": "10",
           "image": "assets/coin.png",
-          "price": { "INR": 99, "USD": 0.99 },
-          "colour": "gold",
-          "tagline": "A small top-up for everyday shopping.",
-          "perks": ["1,000 in-game coins", "Added to your balance instantly"],
+          "price": {
+            "INR": 5,
+            "USD": 0.06
+          },
+          "colour": "#7DD3FC",
+          "tagline": "A little boost to get started.",
+          "perks": [
+            "10 Shards"
+          ],
           "featured": false,
           "badge": ""
         },
         {
-          "name": "5,000 coins",
-          "amount": "5K",
+          "name": "50 Shards",
+          "amount": "50",
           "image": "assets/coin.png",
-          "price": { "INR": 399, "USD": 4.99 },
-          "colour": "#eab308",
-          "tagline": "Most popular pack with bonus coins.",
-          "perks": ["5,000 in-game coins", "+500 bonus coins"],
-          "featured": true,
-          "badge": "Popular"
+          "price": {
+            "INR": 20,
+            "USD": 0.24
+          },
+          "colour": "#38BDF8",
+          "tagline": "Give your progress a quick lift.",
+          "perks": [
+            "50 Shards"
+          ],
+          "featured": false,
+          "badge": ""
         },
         {
-          "name": "12,000 coins",
-          "amount": "12K",
+          "name": "100 Shards",
+          "amount": "100",
           "image": "assets/coin.png",
-          "price": { "INR": 799, "USD": 9.99 },
-          "colour": "orange",
-          "tagline": "Best value for regular players.",
-          "perks": ["12,000 in-game coins", "+2,000 bonus coins"],
+          "price": {
+            "INR": 35,
+            "USD": 0.42
+          },
+          "colour": "#0EA5E9",
+          "tagline": "More options. More upgrades.",
+          "perks": [
+            "100 Shards"
+          ],
           "featured": false,
-          "badge": "Best value"
+          "badge": ""
+        },
+        {
+          "name": "1,000 Shards",
+          "amount": "1K",
+          "image": "assets/coin.png",
+          "price": {
+            "INR": 250,
+            "USD": 3.0
+          },
+          "colour": "#0284C7",
+          "tagline": "A solid stash for regular players.",
+          "perks": [
+            "1,000 Shards"
+          ],
+          "featured": false,
+          "badge": ""
+        },
+        {
+          "name": "5,000 Shards",
+          "amount": "5K",
+          "image": "assets/coin.png",
+          "price": {
+            "INR": 1250,
+            "USD": 15.0
+          },
+          "colour": "#2563EB",
+          "tagline": "Stock up and keep the momentum going.",
+          "perks": [
+            "5,000 Shards"
+          ],
+          "featured": true,
+          "badge": "BEST VALUE"
+        },
+        {
+          "name": "20,000 Shards",
+          "amount": "20K",
+          "image": "assets/coin.png",
+          "price": {
+            "INR": 5000,
+            "USD": 60.0
+          },
+          "colour": "#7C3AED",
+          "tagline": "The ultimate stash for big plans.",
+          "perks": [
+            "20,000 Shards"
+          ],
+          "featured": false,
+          "badge": "ULTIMATE"
         }
       ]
     },
-
     "keys": {
-      "navLabel": "Keys",
-      "colour": "purple",
-      "title": "Crate keys",
-      "subtitle": "Open crates for cosmetics, gear and rare collectables. Keys are delivered to your account.",
-      "boardTitle": "Crate key bundles",
-      "boardText": "Keys work on every crate in the lobby - common, rare and legendary.",
-      "note": "",
-      "buttonText": "Buy keys",
+      "navLabel": "Crate Keys",
+      "colour": "#A855F7",
+      "title": "UNLOCK THE UNKNOWN",
+      "subtitle": "Every key opens the door to a new reward. What will you discover?",
+      "boardTitle": "THE KEY VAULT",
+      "boardText": "Choose your crate key and take your chance at something special.",
+      "note": "After payment, open a ticket in our Discord with your order details so the team can verify your purchase and arrange delivery.",
+      "buttonText": "GET KEY",
+      "orderLink": "https://discord.gg/qkrEyvx2ye",
       "cards": [
         {
-          "name": "3 crate keys",
-          "amount": "x3",
+          "name": "Common Key",
+          "amount": "COMMON",
           "image": "assets/key.png",
-          "price": { "INR": 149, "USD": 1.99 },
-          "colour": "purple",
-          "tagline": "Try your luck on the common crate.",
-          "perks": ["3 common crate keys", "Works on all crates"],
+          "price": {
+            "INR": 5,
+            "USD": 0.06
+          },
+          "colour": "#A3A3A3",
+          "tagline": "Your first step into the vault.",
+          "perks": [
+            "1 Common Crate Key"
+          ],
           "featured": false,
           "badge": ""
         },
         {
-          "name": "10 crate keys",
-          "amount": "x10",
+          "name": "Gold Key",
+          "amount": "GOLD",
           "image": "assets/key.png",
-          "price": { "INR": 399, "USD": 4.99 },
-          "colour": "#a855f7",
-          "tagline": "A solid bundle with a bonus key.",
-          "perks": ["10 common crate keys", "+1 bonus key"],
-          "featured": true,
-          "badge": "Best value"
+          "price": {
+            "INR": 15,
+            "USD": 0.18
+          },
+          "colour": "#FACC15",
+          "tagline": "A golden chance at great rewards.",
+          "perks": [
+            "1 Gold Crate Key"
+          ],
+          "featured": false,
+          "badge": ""
         },
         {
-          "name": "25 crate keys",
-          "amount": "x25",
+          "name": "Prime Key",
+          "amount": "PRIME",
           "image": "assets/key.png",
-          "price": { "INR": 899, "USD": 11.99 },
-          "colour": "magenta",
-          "tagline": "For serious crate openers.",
-          "perks": ["25 common crate keys", "+5 legendary crate keys"],
+          "price": {
+            "INR": 30,
+            "USD": 0.36
+          },
+          "colour": "#38BDF8",
+          "tagline": "Step up to premium crate rewards.",
+          "perks": [
+            "1 Prime Crate Key"
+          ],
           "featured": false,
-          "badge": "Collector"
+          "badge": ""
+        },
+        {
+          "name": "Crimson Key",
+          "amount": "CRIMSON",
+          "image": "assets/key.png",
+          "price": {
+            "INR": 50,
+            "USD": 0.6
+          },
+          "colour": "#FF3434",
+          "tagline": "A bold key for a bigger surprise.",
+          "perks": [
+            "1 Crimson Crate Key"
+          ],
+          "featured": true,
+          "badge": "POPULAR"
+        },
+        {
+          "name": "Amethyst Key",
+          "amount": "AMETHYST",
+          "image": "assets/key.png",
+          "price": {
+            "INR": 75,
+            "USD": 0.9
+          },
+          "colour": "#A855F7",
+          "tagline": "A rare key with a premium feel.",
+          "perks": [
+            "1 Amethyst Crate Key"
+          ],
+          "featured": false,
+          "badge": "RARE"
+        },
+        {
+          "name": "God Key",
+          "amount": "GOD",
+          "image": "assets/key.png",
+          "price": {
+            "INR": 100,
+            "USD": 1.2
+          },
+          "colour": "#F59E0B",
+          "tagline": "The vault's most prestigious key.",
+          "perks": [
+            "1 God Crate Key"
+          ],
+          "featured": false,
+          "badge": "TOP TIER"
         }
       ]
     }
   },
-
-  "_ranksHelp": "Ranks are text only - no artwork is shown on rank cards or the rank detail page. Copy a rank block { ... } to add another rank and delete a block to remove one. 'colour' can be a name (red, blue, green, teal, gold, ...) or any hex value such as #22c55e. 'price' can be per currency, one plain number in the base currency, or ready-made text like \"$4.99\". 'featured': true makes it the most popular rank. 'orderLink' is optional - leave it empty to use redirect.defaultOrderLink, then your Discord link.",
-
+  "_ranksHelp": "MergeSMP rank configuration. Rank names, prices and perks are preserved.",
   "ranks": [
     {
-      "name": "VIP",
-      "price": { "INR": 449, "USD": 4.99 },
-      "colour": "gold",
-      "tagline": "A perfect first step to support the server.",
+      "name": "Member",
+      "price": {
+        "INR": 1,
+        "USD": 0.01
+      },
+      "colour": "#E5E7EB",
+      "tagline": "Every legend starts somewhere.",
       "perks": [
-        "Coloured name in chat",
-        "2 extra /home slots",
-        "/fly in the lobby",
-        "VIP role in Discord"
+        "Member Rank",
+        "Access to Survival",
+        "Access to Economy",
+        "Access to PvP"
       ],
       "featured": false,
       "badge": ""
     },
     {
-      "name": "VIP+",
-      "price": { "INR": 749, "USD": 7.99 },
-      "colour": "#a855f7",
-      "tagline": "More homes, more commands, more fun.",
+      "name": "Grinder",
+      "price": {
+        "INR": 49,
+        "USD": 0.59
+      },
+      "colour": "#55FF55",
+      "tagline": "For players who put in the work.",
       "perks": [
-        "Everything in VIP",
-        "5 extra /home slots",
-        "Access to /workbench and /enderchest",
-        "Priority queue when the server is full",
-        "Monthly cosmetic crate"
+        "Grinder Rank",
+        "Exclusive Chat Prefix",
+        "Extra Home Slots",
+        "Grinder Discord Role"
+      ],
+      "featured": false,
+      "badge": ""
+    },
+    {
+      "name": "VIP",
+      "price": {
+        "INR": 99,
+        "USD": 1.19
+      },
+      "colour": "#FACC15",
+      "tagline": "A first-class upgrade to your journey.",
+      "perks": [
+        "VIP Rank",
+        "VIP Chat Prefix",
+        "Extra Home Slots",
+        "VIP Discord Role"
       ],
       "featured": false,
       "badge": ""
     },
     {
       "name": "MVP",
-      "price": { "INR": 899, "USD": 9.99 },
-      "colour": "blue",
-      "tagline": "Stand out everywhere you go.",
+      "price": {
+        "INR": 199,
+        "USD": 2.39
+      },
+      "colour": "#00C6FF",
+      "tagline": "Stand out. Play bigger. Be recognised.",
       "perks": [
-        "Everything in VIP+",
-        "Exclusive MVP chat prefix",
-        "Custom join message",
-        "Extra claim blocks",
-        "MVP role in Discord"
+        "MVP Rank",
+        "Exclusive MVP Prefix",
+        "More Home Slots",
+        "MVP Discord Role"
       ],
       "featured": true,
-      "badge": "Best value"
+      "badge": "MOST POPULAR"
     },
     {
-      "name": "GOD",
-      "price": { "INR": 1799, "USD": 19.99 },
-      "colour": "red",
-      "tagline": "The full package for serious players.",
+      "name": "Legendary",
+      "price": {
+        "INR": 349,
+        "USD": 4.19
+      },
+      "colour": "#A855F7",
+      "tagline": "Make your presence legendary.",
       "perks": [
-        "Everything in MVP",
-        "Unlimited /home slots",
-        "Cosmetic pet and particle trail",
-        "Early access to new features",
-        "Private support channel in Discord"
+        "Legendary Rank",
+        "Legendary Chat Prefix",
+        "Exclusive Commands",
+        "Extra Home Slots"
       ],
       "featured": false,
-      "badge": "Ultimate"
+      "badge": ""
+    },
+    {
+      "name": "Deadly",
+      "price": {
+        "INR": 499,
+        "USD": 5.99
+      },
+      "colour": "#FF3434",
+      "tagline": "Bring the attitude. Own the spotlight.",
+      "perks": [
+        "Deadly Rank",
+        "Exclusive Deadly Prefix",
+        "Premium Commands",
+        "Extra Home Slots"
+      ],
+      "featured": false,
+      "badge": ""
+    },
+    {
+      "name": "God",
+      "price": {
+        "INR": 749,
+        "USD": 8.99
+      },
+      "colour": "#F59E0B",
+      "tagline": "A powerful status for the boldest players.",
+      "perks": [
+        "God Rank",
+        "Exclusive God Prefix",
+        "Premium Commands",
+        "Exclusive Discord Role"
+      ],
+      "featured": false,
+      "badge": "ELITE"
+    },
+    {
+      "name": "Immortal",
+      "price": {
+        "INR": 1000,
+        "USD": 12.0
+      },
+      "colour": "#F0ABFC",
+      "tagline": "The highest status. A name that lasts.",
+      "perks": [
+        "Immortal Rank",
+        "Exclusive Immortal Prefix",
+        "Premium Commands",
+        "Exclusive Discord Role",
+        "Highest Rank Status"
+      ],
+      "featured": false,
+      "badge": "EXCLUSIVE"
     }
   ]
 }
